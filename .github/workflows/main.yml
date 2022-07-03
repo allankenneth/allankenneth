@@ -29,7 +29,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           if [ -n "$(git status --porcelain resume.html)" ]; then
-            git add docs/index.html
+            git add resume.html
             git commit -m "[ci skip] chore(resume.html): update resume page"
             echo ::set-output name=exit_code::0
           else
