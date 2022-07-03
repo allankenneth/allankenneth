@@ -1,2 +1,5 @@
 <?php 
-echo date('Y-m-d') . ' this should work!';
+$export = 'noise.html';
+$noises = json_decode('noise.json');
+file_put_contents($export, $noises);
+echo 'success';
